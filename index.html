@@ -248,6 +248,19 @@ nav.dn a:hover,nav.dn a.act{color:var(--gm);font-weight:500;}
 .popup-sub{font-size:14px;color:var(--i2);line-height:1.6;margin-bottom:24px;}
 .popup-badge{display:inline-block;background:#FFF3E0;color:#E65100;font-size:12px;font-weight:700;padding:4px 12px;border-radius:12px;margin-bottom:20px;letter-spacing:.06em;}
 
+
+/* USP кликабельные */
+.usp-it{padding:22px 28px;border-right:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:8px;text-decoration:none;transition:background .2s,transform .15s;cursor:pointer;}
+.usp-it:hover{background:rgba(255,255,255,.07);transform:translateY(-2px);}
+.usp-it .usp-arr{font-size:16px;color:rgba(255,255,255,.3);margin-top:4px;transition:transform .2s;}
+.usp-it:hover .usp-arr{transform:translateX(4px);color:rgba(255,255,255,.7);}
+@media(max-width:768px){
+  .usp-it{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);flex-direction:row;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;}
+  .usp-it:last-child{border-bottom:none;}
+  .usp-ic{font-size:28px;flex-shrink:0;}
+  .usp-info{flex:1;}
+}
+
 /* QUIZ */
 .quiz-sec{background:linear-gradient(135deg,var(--gd),#0F4A35);padding:80px 0;}
 .quiz-wrap{max-width:640px;margin:0 auto;text-align:center;}
@@ -607,10 +620,38 @@ nav.dn a:hover,nav.dn a.act{color:var(--gm);font-weight:500;}
 <section class="usp">
   <div class="wrap">
     <div class="usp-gr">
-      <div class="usp-it fu"><div class="usp-ic">&#129464;</div><div class="usp-ti">&#1047;&#1076;&#1086;&#1088;&#1086;&#1074;&#1100;&#1077; &#1089;&#1090;&#1086;&#1087;&#1099;</div><div class="usp-tx">&#1040;&#1085;&#1072;&#1090;&#1086;&#1084;&#1080;&#1095;&#1077;&#1089;&#1082;&#1072;&#1103; &#1089;&#1090;&#1077;&#1083;&#1100;&#1082;&#1072;, &#1087;&#1086;&#1076;&#1076;&#1077;&#1088;&#1078;&#1082;&#1072; &#1089;&#1074;&#1086;&#1076;&#1072;</div></div>
-      <div class="usp-it fu" style="transition-delay:.08s"><div class="usp-ic">&#127381;</div><div class="usp-ti">&#1057;&#1086;&#1073;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1099;&#1081; &#1073;&#1088;&#1077;&#1085;&#1076;</div><div class="usp-tx">&#1053;&#1072;&#1096;&#1072; &#1083;&#1080;&#1085;&#1077;&#1081;&#1082;&#1072;, &#1085;&#1072;&#1096;&#1072; &#1088;&#1072;&#1079;&#1088;&#1072;&#1073;&#1086;&#1090;&#1082;&#1072;</div></div>
-      <div class="usp-it fu" style="transition-delay:.16s"><div class="usp-ic">&#128205;</div><div class="usp-ti">&#1054;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1084;&#1072;&#1075;&#1072;&#1079;&#1080;&#1085; &#1074; &#1040;&#1083;&#1084;&#1072;&#1090;&#1099;</div><div class="usp-tx">&#1058;&#1062; &#1056;&#1080;&#1090;&#1094;-&#1055;&#1072;&#1083;&#1072;&#1089;, &#1086;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1084;&#1072;&#1075;&#1072;&#1079;&#1080;&#1085;</div></div>
-      <div class="usp-it fu" style="transition-delay:.24s"><div class="usp-ic">&#128666;</div><div class="usp-ti">&#1044;&#1086;&#1089;&#1090;&#1072;&#1074;&#1082;&#1072;</div><div class="usp-tx">&#1055;&#1086; &#1040;&#1083;&#1084;&#1072;&#1090;&#1099; &#1080; &#1074;&#1089;&#1077;&#1084;&#1091; &#1050;&#1072;&#1079;&#1072;&#1093;&#1089;&#1090;&#1072;&#1085;&#1091;</div></div>
+      <a href="#te" class="usp-it fu">
+        <div class="usp-ic">&#129464;</div>
+        <div class="usp-info">
+          <div class="usp-ti">&#1047;&#1076;&#1086;&#1088;&#1086;&#1074;&#1100;&#1077; &#1089;&#1090;&#1086;&#1087;&#1099;</div>
+          <div class="usp-tx">&#1040;&#1085;&#1072;&#1090;&#1086;&#1084;&#1080;&#1095;&#1077;&#1089;&#1082;&#1072;&#1103; &#1089;&#1090;&#1077;&#1083;&#1100;&#1082;&#1072;, &#1087;&#1086;&#1076;&#1076;&#1077;&#1088;&#1078;&#1082;&#1072; &#1089;&#1074;&#1086;&#1076;&#1072;</div>
+        </div>
+        <span class="usp-arr">&#8594;</span>
+      </a>
+      <a href="#about" class="usp-it fu" style="transition-delay:.08s">
+        <div class="usp-ic">&#127381;</div>
+        <div class="usp-info">
+          <div class="usp-ti">&#1057;&#1086;&#1073;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1099;&#1081; &#1073;&#1088;&#1077;&#1085;&#1076;</div>
+          <div class="usp-tx">&#1053;&#1072;&#1096;&#1072; &#1083;&#1080;&#1085;&#1077;&#1081;&#1082;&#1072;, &#1085;&#1072;&#1096;&#1072; &#1088;&#1072;&#1079;&#1088;&#1072;&#1073;&#1086;&#1090;&#1082;&#1072;</div>
+        </div>
+        <span class="usp-arr">&#8594;</span>
+      </a>
+      <a href="#ct" class="usp-it fu" style="transition-delay:.16s">
+        <div class="usp-ic">&#128205;</div>
+        <div class="usp-info">
+          <div class="usp-ti">&#1054;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1084;&#1072;&#1075;&#1072;&#1079;&#1080;&#1085; &#1074; &#1040;&#1083;&#1084;&#1072;&#1090;&#1099;</div>
+          <div class="usp-tx">&#1058;&#1062; &#1056;&#1080;&#1090;&#1094;-&#1055;&#1072;&#1083;&#1072;&#1089;, 2-&#1081; &#1101;&#1090;&#1072;&#1078;</div>
+        </div>
+        <span class="usp-arr">&#8594;</span>
+      </a>
+      <a href="https://wa.me/77056100172?text=&#1047;&#1076;&#1088;&#1072;&#1074;&#1089;&#1090;&#1074;&#1091;&#1081;&#1090;&#1077;! &#1059;&#1079;&#1085;&#1072;&#1090;&#1100; &#1086; &#1076;&#1086;&#1089;&#1090;&#1072;&#1074;&#1082;&#1077;" class="usp-it fu" style="transition-delay:.24s" target="_blank" rel="noopener">
+        <div class="usp-ic">&#128666;</div>
+        <div class="usp-info">
+          <div class="usp-ti">&#1044;&#1086;&#1089;&#1090;&#1072;&#1074;&#1082;&#1072;</div>
+          <div class="usp-tx">&#1055;&#1086; &#1040;&#1083;&#1084;&#1072;&#1090;&#1099; &#1080; &#1074;&#1089;&#1077;&#1084;&#1091; &#1050;&#1072;&#1079;&#1072;&#1093;&#1089;&#1090;&#1072;&#1085;&#1091;</div>
+        </div>
+        <span class="usp-arr">&#8594;</span>
+      </a>
     </div>
   </div>
 </section>
