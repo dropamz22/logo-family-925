@@ -209,6 +209,63 @@ nav.dn a:hover,nav.dn a.act{color:var(--gm);font-weight:500;}
   .ftm{grid-template-columns:1fr;}
   .ctas{flex-direction:column;}
 }
+
+/* HERO BADGE TOP */
+.hero-badge-top{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:6px 16px;font-size:12px;font-weight:500;color:rgba(255,255,255,.85);margin-bottom:18px;letter-spacing:.04em;}
+
+/* HERO WA BUTTON */
+.btn-wa-hero{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;background:#25D366;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:background .2s;}
+.btn-wa-hero:hover{background:#1aad54;}
+
+/* HERO SOCIAL PROOF */
+.hero-social-proof{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,.15);}
+.hsp-item{font-size:13px;color:rgba(255,255,255,.75);}
+.hsp-sep{color:rgba(255,255,255,.3);font-size:12px;}
+
+/* URGENCY BAR */
+.urgency-bar{background:linear-gradient(90deg,#B9975B,#d4b06a,#B9975B);background-size:200% 100%;animation:shimmer 3s infinite linear;padding:10px 0;text-align:center;font-size:13px;font-weight:600;color:#0D3B2B;letter-spacing:.04em;}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.urgency-bar span{margin:0 8px;}
+
+/* FAQ */
+.faq{background:var(--wh);padding:80px 0;}
+.faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
+.faq-item{border:1px solid var(--bd);border-radius:10px;overflow:hidden;}
+.faq-q{width:100%;padding:18px 22px;background:transparent;border:none;text-align:left;font-family:"Inter",sans-serif;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background .2s;}
+.faq-q:hover{background:var(--bg);}
+.faq-q .arr{font-size:18px;transition:transform .3s;color:var(--gm);}
+.faq-q.open .arr{transform:rotate(45deg);}
+.faq-a{display:none;padding:0 22px 18px;font-size:14px;color:var(--i2);line-height:1.7;}
+.faq-a.open{display:block;}
+
+/* POPUP */
+.popup-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;align-items:center;justify-content:center;}
+.popup-overlay.show{display:flex;}
+.popup{background:var(--wh);border-radius:16px;padding:40px 36px;max-width:440px;width:90%;position:relative;text-align:center;}
+.popup-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:24px;cursor:pointer;color:var(--i3);line-height:1;}
+.popup-icon{font-size:48px;margin-bottom:12px;}
+.popup-title{font-family:"Playfair Display",serif;font-size:26px;color:var(--ink);margin-bottom:10px;}
+.popup-sub{font-size:14px;color:var(--i2);line-height:1.6;margin-bottom:24px;}
+.popup-badge{display:inline-block;background:#FFF3E0;color:#E65100;font-size:12px;font-weight:700;padding:4px 12px;border-radius:12px;margin-bottom:20px;letter-spacing:.06em;}
+
+/* QUIZ */
+.quiz-sec{background:linear-gradient(135deg,var(--gd),#0F4A35);padding:80px 0;}
+.quiz-wrap{max-width:640px;margin:0 auto;text-align:center;}
+.quiz-title{font-size:clamp(24px,3vw,36px);color:#fff;margin-bottom:12px;}
+.quiz-sub{font-size:15px;color:rgba(255,255,255,.65);margin-bottom:36px;}
+.quiz-options{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:28px;}
+.quiz-opt{padding:16px 20px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);border-radius:10px;color:#fff;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s;text-align:left;}
+.quiz-opt:hover,.quiz-opt.selected{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.6);}
+.quiz-step{display:none;}.quiz-step.active{display:block;}
+.quiz-progress{display:flex;gap:6px;justify-content:center;margin-bottom:28px;}
+.quiz-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.25);}
+.quiz-dot.done{background:#fff;}
+
+@media(max-width:520px){
+  .hero-social-proof{gap:6px;}
+  .hsp-sep{display:none;}
+  .quiz-options{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -243,6 +300,9 @@ nav.dn a:hover,nav.dn a.act{color:var(--gm);font-weight:500;}
   </div>
 </header>
 
+<div class="urgency-bar">
+  <span>&#9889;</span> &#1058;&#1086;&#1083;&#1100;&#1082;&#1086; &#1089;&#1077;&#1081;&#1095;&#1072;&#1089;: &#1073;&#1077;&#1089;&#1087;&#1083;&#1072;&#1090;&#1085;&#1072;&#1103; &#1076;&#1086;&#1089;&#1090;&#1072;&#1074;&#1082;&#1072; &#1087;&#1086; &#1040;&#1083;&#1084;&#1072;&#1090;&#1099; &#1087;&#1088;&#1080; &#1079;&#1072;&#1082;&#1072;&#1079;&#1077; &#1086;&#1090; 2 &#1087;&#1072;&#1088; <span>&bull;</span> &#1054;&#1089;&#1090;&#1072;&#1083;&#1086;&#1089;&#1100; &#1084;&#1077;&#1089;&#1090; &#1085;&#1072; &#1089;&#1077;&#1079;&#1086;&#1085;&#1085;&#1091;&#1102; &#1089;&#1082;&#1080;&#1076;&#1082;&#1091; 10%: <span id="urgency-count">7</span>
+</div>
 <div class="hbar">
   <div class="wrap">
     <div class="hbar-in">
@@ -256,16 +316,19 @@ nav.dn a:hover,nav.dn a.act{color:var(--gm);font-weight:500;}
   <div class="wrap">
     <div class="hero-in">
       <div class="fu">
-        <h1 class="hero-title">&#1040;&#1085;&#1072;&#1090;&#1086;&#1084;&#1080;&#1103;<br><span class="acc">&#1074; &#1082;&#1072;&#1078;&#1076;&#1086;&#1081;</span><br>&#1087;&#1072;&#1088;&#1077;</h1>
-        <p class="hero-sub">20 &#1084;&#1086;&#1076;&#1077;&#1083;&#1077;&#1081; &#1083;&#1080;&#1085;&#1077;&#1081;&#1082;&#1080; 925 &mdash; &#1084;&#1086;&#1082;&#1072;&#1089;&#1080;&#1085;&#1099;, &#1083;&#1086;&#1072;&#1092;&#1077;&#1088;&#1099;, &#1089;&#1085;&#1077;&#1082;&#1077;&#1088;&#1099; &#1080; &#1089;&#1072;&#1085;&#1076;&#1072;&#1083;&#1080;&#1080;. &#1054;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1084;&#1072;&#1075;&#1072;&#1079;&#1080;&#1085; &#1074; &#1040;&#1083;&#1084;&#1072;&#1090;&#1099;, &#1058;&#1062; &#1056;&#1080;&#1090;&#1094;-&#1055;&#1072;&#1083;&#1072;&#1089;.</p>
+        <div class="hero-badge-top">&#127381; &#1057;&#1086;&#1073;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1072;&#1103; &#1088;&#1072;&#1079;&#1088;&#1072;&#1073;&#1086;&#1090;&#1082;&#1072; &bull; &#1053;&#1072;&#1090;&#1091;&#1088;&#1072;&#1083;&#1100;&#1085;&#1072;&#1103; &#1082;&#1086;&#1078;&#1072; &bull; &#1040;&#1083;&#1084;&#1072;&#1090;&#1099;</div>
+        <h1 class="hero-title">&#1054;&#1073;&#1091;&#1074;&#1100;, &#1074; &#1082;&#1086;&#1090;&#1086;&#1088;&#1086;&#1081;<br><span class="acc">&#1085;&#1086;&#1075;&#1080; &#1085;&#1077; &#1091;&#1089;&#1090;&#1072;&#1102;&#1090;</span><br>&#1074;&#1077;&#1089;&#1100; &#1076;&#1077;&#1085;&#1100;</h1>
+        <p class="hero-sub">&#1040;&#1085;&#1072;&#1090;&#1086;&#1084;&#1080;&#1095;&#1077;&#1089;&#1082;&#1072;&#1103; &#1083;&#1080;&#1085;&#1077;&#1081;&#1082;&#1072; 925 &mdash; &#1087;&#1086;&#1076;&#1076;&#1077;&#1088;&#1078;&#1082;&#1072; &#1089;&#1074;&#1086;&#1076;&#1072; &#1089;&#1090;&#1086;&#1087;&#1099;, &#1085;&#1072;&#1090;&#1091;&#1088;&#1072;&#1083;&#1100;&#1085;&#1099;&#1077; &#1084;&#1072;&#1090;&#1077;&#1088;&#1080;&#1072;&#1083;&#1099; &#1080; &#1089;&#1090;&#1080;&#1083;&#1100;, &#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1081; &#1085;&#1077; &#1087;&#1088;&#1080;&#1093;&#1086;&#1076;&#1080;&#1090;&#1089;&#1103; &#1078;&#1077;&#1088;&#1090;&#1074;&#1086;&#1074;&#1072;&#1090;&#1100;.</p>
         <div class="ctas">
-          <a href="#catalog" class="btn-g">&#1057;&#1084;&#1086;&#1090;&#1088;&#1077;&#1090;&#1100; &#1074;&#1089;&#1077; &#8594;</a>
-          <a href="https://wa.me/77056100172" class="btn-o">&#128172; WhatsApp</a>
+          <a href="#catalog" class="btn-g">&#1055;&#1086;&#1089;&#1084;&#1086;&#1090;&#1088;&#1077;&#1090;&#1100; &#1082;&#1072;&#1090;&#1072;&#1083;&#1086;&#1075; &#8594;</a>
+          <a href="https://wa.me/77056100172?text=&#1047;&#1076;&#1088;&#1072;&#1074;&#1089;&#1090;&#1074;&#1091;&#1081;&#1090;&#1077;! &#1055;&#1086;&#1084;&#1086;&#1075;&#1080;&#1090;&#1077; &#1087;&#1086;&#1076;&#1086;&#1073;&#1088;&#1072;&#1090;&#1100; &#1088;&#1072;&#1079;&#1084;&#1077;&#1088;" class="btn-wa-hero">&#128172; &#1055;&#1086;&#1076;&#1086;&#1073;&#1088;&#1072;&#1090;&#1100; &#1088;&#1072;&#1079;&#1084;&#1077;&#1088;</a>
         </div>
-        <div class="stats">
-          <div><span class="stat-n">20</span><span class="stat-l">&#1084;&#1086;&#1076;&#1077;&#1083;&#1077;&#1081; 925</span></div>
-          <div><span class="stat-n">37K+</span><span class="stat-l">&#1087;&#1086;&#1076;&#1087;&#1080;&#1089;&#1095;&#1080;&#1082;&#1086;&#1074;</span></div>
-          <div><span class="stat-n">&#1040;&#1083;&#1084;&#1072;&#1090;&#1099;</span><span class="stat-l">&#1058;&#1062; &#1056;&#1080;&#1090;&#1094;-&#1055;&#1072;&#1083;&#1072;&#1089;</span></div>
+        <div class="hero-social-proof">
+          <span class="hsp-item">&#11088; 37 000+ &#1074; Instagram</span>
+          <span class="hsp-sep">&bull;</span>
+          <span class="hsp-item">&#128098; 20 &#1084;&#1086;&#1076;&#1077;&#1083;&#1077;&#1081;</span>
+          <span class="hsp-sep">&bull;</span>
+          <span class="hsp-item">&#128205; &#1058;&#1062; &#1056;&#1080;&#1090;&#1094;-&#1055;&#1072;&#1083;&#1072;&#1089;</span>
         </div>
       </div>
       <div class="fu" style="transition-delay:.15s">
@@ -626,6 +689,37 @@ nav.dn a:hover,nav.dn a.act{color:var(--gm);font-weight:500;}
   </div>
 </section>
 
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:48px;" class="fu">
+      <span class="sec-ey">&#1063;&#1072;&#1089;&#1090;&#1099;&#1077; &#1074;&#1086;&#1087;&#1088;&#1086;&#1089;&#1099;</span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);color:var(--ink);margin-top:8px;">FAQ</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">&#1050;&#1072;&#1082; &#1087;&#1086;&#1085;&#1103;&#1090;&#1100;, &#1082;&#1072;&#1082;&#1086;&#1081; &#1088;&#1072;&#1079;&#1084;&#1077;&#1088; &#1087;&#1086;&#1076;&#1086;&#1081;&#1076;&#1105;&#1090;? <span class="arr">+</span></button>
+        <div class="faq-a">&#1053;&#1072;&#1087;&#1080;&#1096;&#1080;&#1090;&#1077; &#1085;&#1072;&#1084; &#1074; WhatsApp &mdash; &#1089;&#1082;&#1072;&#1078;&#1080;&#1090;&#1077; &#1074;&#1072;&#1096; &#1086;&#1073;&#1099;&#1095;&#1085;&#1099;&#1081; &#1088;&#1072;&#1079;&#1084;&#1077;&#1088; &#1080; &#1084;&#1099; &#1087;&#1086;&#1084;&#1086;&#1078;&#1077;&#1084; &#1087;&#1086;&#1076;&#1086;&#1073;&#1088;&#1072;&#1090;&#1100;. &#1058;&#1072;&#1082;&#1078;&#1077; &#1084;&#1086;&#1078;&#1085;&#1086; &#1087;&#1088;&#1080;&#1081;&#1090;&#1080; &#1074; &#1086;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1084;&#1072;&#1075;&#1072;&#1079;&#1080;&#1085; &#1074; &#1058;&#1062; &#1056;&#1080;&#1090;&#1094;-&#1055;&#1072;&#1083;&#1072;&#1089; &#1080; &#1087;&#1088;&#1080;&#1084;&#1077;&#1088;&#1103;&#1090;&#1100; &#1083;&#1080;&#1095;&#1085;&#1086;.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">&#1048;&#1079; &#1095;&#1077;&#1075;&#1086; &#1089;&#1076;&#1077;&#1083;&#1072;&#1085;&#1072; &#1086;&#1073;&#1091;&#1074;&#1100; 925? <span class="arr">+</span></button>
+        <div class="faq-a">&#1053;&#1072;&#1090;&#1091;&#1088;&#1072;&#1083;&#1100;&#1085;&#1072;&#1103; &#1082;&#1086;&#1078;&#1072; &#1080; &#1079;&#1072;&#1084;&#1096; &#1089;&#1085;&#1072;&#1088;&#1091;&#1078;&#1080;, &#1085;&#1072;&#1090;&#1091;&#1088;&#1072;&#1083;&#1100;&#1085;&#1072;&#1103; &#1082;&#1086;&#1078;&#1072; &#1074;&#1085;&#1091;&#1090;&#1088;&#1080; (&#1089;&#1090;&#1077;&#1083;&#1100;&#1082;&#1072;). &#1055;&#1086;&#1076;&#1086;&#1096;&#1074;&#1072; &mdash; &#1072;&#1085;&#1090;&#1080;&#1089;&#1082;&#1086;&#1083;&#1100;&#1079;&#1103;&#1097;&#1072;&#1103; &#1088;&#1077;&#1079;&#1080;&#1085;&#1072; &#1089; &#1072;&#1084;&#1086;&#1088;&#1090;&#1080;&#1079;&#1072;&#1094;&#1080;&#1077;&#1081;. &#1042;&#1089;&#1077; &#1084;&#1072;&#1090;&#1077;&#1088;&#1080;&#1072;&#1083;&#1099; &#1087;&#1088;&#1086;&#1096;&#1083;&#1080; &#1087;&#1088;&#1086;&#1074;&#1077;&#1088;&#1082;&#1091; &#1082;&#1072;&#1095;&#1077;&#1089;&#1090;&#1074;&#1072;.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">&#1052;&#1086;&#1078;&#1085;&#1086; &#1083;&#1080; &#1074;&#1077;&#1088;&#1085;&#1091;&#1090;&#1100; &#1086;&#1073;&#1091;&#1074;&#1100;, &#1077;&#1089;&#1083;&#1080; &#1085;&#1077; &#1087;&#1086;&#1076;&#1086;&#1096;&#1083;&#1072;? <span class="arr">+</span></button>
+        <div class="faq-a">&#1044;&#1072;, &#1077;&#1089;&#1083;&#1080; &#1086;&#1073;&#1091;&#1074;&#1100; &#1085;&#1077; &#1085;&#1086;&#1089;&#1080;&#1083;&#1072;&#1089;&#1100; &#1080; &#1089;&#1086;&#1093;&#1088;&#1072;&#1085;&#1077;&#1085; &#1090;&#1086;&#1074;&#1072;&#1088;&#1085;&#1099;&#1081; &#1074;&#1080;&#1076;. &#1057;&#1074;&#1103;&#1078;&#1080;&#1090;&#1077;&#1089;&#1100; &#1089; &#1085;&#1072;&#1084;&#1080; &#1074; &#1090;&#1077;&#1095;&#1077;&#1085;&#1080;&#1077; 14 &#1076;&#1085;&#1077;&#1081; &#1087;&#1086;&#1089;&#1083;&#1077; &#1087;&#1086;&#1082;&#1091;&#1087;&#1082;&#1080;.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">&#1045;&#1089;&#1090;&#1100; &#1083;&#1080; &#1076;&#1086;&#1089;&#1090;&#1072;&#1074;&#1082;&#1072; &#1087;&#1086; &#1050;&#1072;&#1079;&#1072;&#1093;&#1089;&#1090;&#1072;&#1085;&#1091;? <span class="arr">+</span></button>
+        <div class="faq-a">&#1044;&#1072;! &#1044;&#1086;&#1089;&#1090;&#1072;&#1074;&#1083;&#1103;&#1077;&#1084; &#1087;&#1086; &#1074;&#1089;&#1077;&#1084;&#1091; &#1050;&#1072;&#1079;&#1072;&#1093;&#1089;&#1090;&#1072;&#1085;&#1091;. &#1055;&#1086; &#1040;&#1083;&#1084;&#1072;&#1090;&#1099; &mdash; &#1082;&#1091;&#1088;&#1100;&#1077;&#1088;&#1086;&#1084;. &#1042; &#1076;&#1088;&#1091;&#1075;&#1080;&#1077; &#1075;&#1086;&#1088;&#1086;&#1076;&#1072; &mdash; &#1087;&#1086;&#1095;&#1090;&#1086;&#1081; &#1080;&#1083;&#1080; СДЭК. &#1059;&#1079;&#1085;&#1072;&#1081;&#1090;&#1077; &#1089;&#1090;&#1086;&#1080;&#1084;&#1086;&#1089;&#1090;&#1100; &#1074; WhatsApp.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">&#1063;&#1077;&#1084; 925 &#1086;&#1090;&#1083;&#1080;&#1095;&#1072;&#1077;&#1090;&#1089;&#1103; &#1086;&#1090; &#1086;&#1073;&#1099;&#1095;&#1085;&#1086;&#1081; &#1086;&#1073;&#1091;&#1074;&#1080;? <span class="arr">+</span></button>
+        <div class="faq-a">&#1054;&#1073;&#1099;&#1095;&#1085;&#1072;&#1103; &#1086;&#1073;&#1091;&#1074;&#1100; &#1076;&#1077;&#1083;&#1072;&#1077;&#1090;&#1089;&#1103; &#1087;&#1086;&#1076; &#1074;&#1085;&#1077;&#1096;&#1085;&#1080;&#1081; &#1074;&#1080;&#1076;. 925 &#1089;&#1086;&#1079;&#1076;&#1072;&#1074;&#1072;&#1083;&#1072;&#1089;&#1100; &#1089; &#1091;&#1095;&#1077;&#1090;&#1086;&#1084; &#1072;&#1085;&#1072;&#1090;&#1086;&#1084;&#1080;&#1080; &#1089;&#1090;&#1086;&#1087;&#1099;: &#1072;&#1085;&#1072;&#1090;&#1086;&#1084;&#1080;&#1095;&#1077;&#1089;&#1082;&#1072;&#1103; &#1089;&#1090;&#1077;&#1083;&#1100;&#1082;&#1072;, &#1096;&#1080;&#1088;&#1086;&#1082;&#1072;&#1103; &#1085;&#1086;&#1089;&#1086;&#1095;&#1085;&#1072;&#1103; &#1095;&#1072;&#1089;&#1090;&#1100;, &#1087;&#1086;&#1076;&#1076;&#1077;&#1088;&#1078;&#1082;&#1072; &#1089;&#1074;&#1086;&#1076;&#1072;. &#1053;&#1086;&#1075;&#1080; &#1085;&#1077; &#1091;&#1089;&#1090;&#1072;&#1102;&#1090; &#1076;&#1072;&#1078;&#1077; &#1087;&#1086;&#1089;&#1083;&#1077; 10+ &#1095;&#1072;&#1089;&#1086;&#1074; &#1085;&#1072; &#1085;&#1086;&#1075;&#1072;&#1093;.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="wrap">
     <div class="ftm">
@@ -640,7 +734,7 @@ nav.dn a:hover,nav.dn a.act{color:var(--gm);font-weight:500;}
       </div>
       <div><div class="ftct">&#1050;&#1072;&#1090;&#1072;&#1083;&#1086;&#1075;</div><ul class="ftl"><li><a href="#" onclick="filt2('loafer')">&#1052;&#1086;&#1082;&#1072;&#1089;&#1080;&#1085;&#1099;</a></li><li><a href="#" onclick="filt2('sneaker')">&#1050;&#1088;&#1086;&#1089;&#1089;&#1086;&#1074;&#1082;&#1080;</a></li><li><a href="#" onclick="filt2('oxford')">&#1051;&#1086;&#1072;&#1092;&#1077;&#1088;&#1099;</a></li><li><a href="#" onclick="filt2('sandal')">&#1057;&#1072;&#1085;&#1076;&#1072;&#1083;&#1080;&#1080;</a></li></ul></div>
       <div><div class="ftct">&#1055;&#1086;&#1082;&#1091;&#1087;&#1072;&#1090;&#1077;&#1083;&#1103;&#1084;</div><ul class="ftl"><li><a href="#">&#1044;&#1086;&#1089;&#1090;&#1072;&#1074;&#1082;&#1072;</a></li><li><a href="#">&#1054;&#1087;&#1083;&#1072;&#1090;&#1072;</a></li><li><a href="#">&#1042;&#1086;&#1079;&#1074;&#1088;&#1072;&#1090;</a></li><li><a href="#">&#1056;&#1072;&#1079;&#1084;&#1077;&#1088;&#1085;&#1072;&#1103; &#1089;&#1077;&#1090;&#1082;&#1072;</a></li></ul></div>
-      <div><div class="ftct">&#1054; &#1085;&#1072;&#1089;</div><ul class="ftl"><li><a href="#about">&#1048;&#1089;&#1090;&#1086;&#1088;&#1080;&#1103;</a></li><li><a href="https://instagram.com/lo_go_family" target="_blank">Instagram</a></li><li><a href="#ct">&#1054;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1084;&#1072;&#1075;&#1072;&#1079;&#1080;&#1085;</a></li><li><a href="https://wa.me/77056100172">WhatsApp</a></li></ul></div>
+      <div><div class="ftct">&#1054; &#1085;&#1072;&#1089;</div><ul class="ftl"><li><a href="#about">&#1048;&#1089;&#1090;&#1086;&#1088;&#1080;&#1103;</a></li><li><a href="#faq">FAQ</a></li><li><a href="https://instagram.com/lo_go_family" target="_blank">Instagram</a></li><li><a href="#ct">&#1054;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1084;&#1072;&#1075;&#1072;&#1079;&#1080;&#1085;</a></li><li><a href="https://wa.me/77056100172">WhatsApp</a></li></ul></div>
     </div>
     <div class="ftbot">
       <p class="ftcopy">&copy; 2024 LO-GO family &middot; 925 &middot; &#1040;&#1083;&#1084;&#1072;&#1090;&#1099;</p>
@@ -648,6 +742,20 @@ nav.dn a:hover,nav.dn a.act{color:var(--gm);font-weight:500;}
     </div>
   </div>
 </footer>
+
+
+<!-- POPUP -->
+<div class="popup-overlay" id="popup">
+  <div class="popup">
+    <button class="popup-close" onclick="closePopup()">&#10005;</button>
+    <div class="popup-icon">&#128609;</div>
+    <div class="popup-badge">&#9889; &#1057;&#1087;&#1077;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1086;&#1077; &#1087;&#1088;&#1077;&#1076;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1077;</div>
+    <h3 class="popup-title">&#1057;&#1082;&#1080;&#1076;&#1082;&#1072; 10% &#1085;&#1072; &#1087;&#1077;&#1088;&#1074;&#1091;&#1102; &#1087;&#1072;&#1088;&#1091;</h3>
+    <p class="popup-sub">&#1053;&#1072;&#1087;&#1080;&#1096;&#1080;&#1090;&#1077; &#1085;&#1072;&#1084; &#1074; WhatsApp &#1089;&#1077;&#1081;&#1095;&#1072;&#1089; &#1080; &#1087;&#1086;&#1083;&#1091;&#1095;&#1080;&#1090;&#1077; &#1089;&#1082;&#1080;&#1076;&#1082;&#1091; 10% + &#1073;&#1077;&#1089;&#1087;&#1083;&#1072;&#1090;&#1085;&#1091;&#1102; &#1076;&#1086;&#1089;&#1090;&#1072;&#1074;&#1082;&#1091; &#1087;&#1086; &#1040;&#1083;&#1084;&#1072;&#1090;&#1099;</p>
+    <a href="https://wa.me/77056100172?text=&#1061;&#1086;&#1095;&#1091; &#1089;&#1082;&#1080;&#1076;&#1082;&#1091; 10% &#1085;&#1072; &#1087;&#1077;&#1088;&#1074;&#1091;&#1102; &#1087;&#1072;&#1088;&#1091;" class="btn-g" style="width:100%;justify-content:center;margin-bottom:12px;" onclick="closePopup()">&#128172; &#1053;&#1072;&#1087;&#1080;&#1089;&#1072;&#1090;&#1100; &#1074; WhatsApp</a>
+    <button onclick="closePopup()" style="background:none;border:none;color:var(--i3);font-size:13px;cursor:pointer;width:100%;">&#1053;&#1077;&#1090;, &#1089;&#1087;&#1072;&#1089;&#1080;&#1073;&#1086;</button>
+  </div>
+</div>
 
 <a href="https://wa.me/77056100172" class="swa">&#128172;</a>
 
@@ -677,6 +785,45 @@ function searchP(q){
     const n=c.querySelector('.pcard-name').textContent.toLowerCase();
     c.style.display=(!t||n.includes(t))?'':'none';
   });
+}
+
+// POPUP — показать через 15 сек если не закрыт
+function closePopup(){
+  document.getElementById('popup').classList.remove('show');
+  sessionStorage.setItem('popup_closed','1');
+}
+setTimeout(()=>{
+  if(!sessionStorage.getItem('popup_closed')){
+    document.getElementById('popup').classList.add('show');
+  }
+},15000);
+document.getElementById('popup').addEventListener('click',function(e){
+  if(e.target===this)closePopup();
+});
+
+// FAQ accordion
+function toggleFaq(btn){
+  const ans=btn.nextElementSibling;
+  const isOpen=ans.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a=>a.classList.remove('open'));
+  document.querySelectorAll('.faq-q').forEach(b=>b.classList.remove('open'));
+  if(!isOpen){ans.classList.add('open');btn.classList.add('open');}
+}
+
+// Urgency countdown
+let seats=7;
+const uc=document.getElementById('urgency-count');
+if(uc){
+  const saved=sessionStorage.getItem('seats');
+  if(saved)seats=parseInt(saved);
+  uc.textContent=seats;
+  setInterval(()=>{
+    if(seats>1&&Math.random()<0.003){
+      seats--;
+      uc.textContent=seats;
+      sessionStorage.setItem('seats',seats);
+    }
+  },3000);
 }
 </script>
 </body>
