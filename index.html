@@ -98,7 +98,7 @@ nav a:hover{color:var(--ink);}
 .sec-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:32px;gap:16px;flex-wrap:wrap;}
 .sec-title{font-size:clamp(24px,3vw,36px);color:var(--ink);letter-spacing:-.01em;}
 .sec-sub{font-size:13px;color:var(--i3);margin-top:4px;}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px;}
+.filters{display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;margin-bottom:32px;padding-bottom:4px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}.filters::-webkit-scrollbar{display:none;}
 .fchip{padding:8px 18px;background:transparent;border:1px solid var(--bd);border-radius:2px;font-size:13px;color:var(--i2);cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif;}
 .fchip:hover{border-color:var(--gm);color:var(--gm);}
 .fchip.on{background:var(--gm);border-color:var(--gm);color:#fff;}
@@ -106,7 +106,7 @@ nav a:hover{color:var(--ink);}
 .pcard{background:var(--wh);transition:box-shadow .25s;}
 .pcard:hover{box-shadow:0 4px 24px rgba(0,0,0,.08);position:relative;z-index:1;}
 .pimg{position:relative;overflow:hidden;background:#fff;aspect-ratio:1/1;}
-.pimg img{width:100%;height:100%;object-fit:contain;padding:16px;transition:transform .4s;}
+.pimg img{width:100%;height:100%;object-fit:contain;object-position:center bottom;padding:12px 16px 0;transition:transform .4s;}
 .pcard:hover .pimg img{transform:scale(1.04);}
 .ptag{position:absolute;top:10px;left:10px;background:var(--gd);color:#fff;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;}
 .pbody{padding:16px;border-top:1px solid var(--bd);}
@@ -242,6 +242,14 @@ footer{background:#0a2e20;padding:60px 0 32px;}
   .pfoot{flex-direction:column;align-items:flex-start;}
   .pbtn{width:100%;text-align:center;}
 }
+
+@media(max-width:600px){
+  .hero{padding:48px 0 40px;}
+  .hero-title{font-size:36px;}
+  .hero-btns{gap:10px;}
+  .btn-primary,.btn-secondary{padding:11px 20px;font-size:13px;}
+  .noticebar{font-size:11px;padding:8px 12px;}
+}
 </style>
 </head>
 <body>
@@ -297,8 +305,8 @@ footer{background:#0a2e20;padding:60px 0 32px;}
         <h1 class="hero-title">&#1054;&#1073;&#1091;&#1074;&#1100;, &#1074; &#1082;&#1086;&#1090;&#1086;&#1088;&#1086;&#1081;<br><em>&#1085;&#1086;&#1075;&#1080; &#1085;&#1077; &#1091;&#1089;&#1090;&#1072;&#1102;&#1090;</em><br>&#1074;&#1077;&#1089;&#1100; &#1076;&#1077;&#1085;&#1100;</h1>
         <p class="hero-desc">&#1040;&#1085;&#1072;&#1090;&#1086;&#1084;&#1080;&#1095;&#1077;&#1089;&#1082;&#1072;&#1103; &#1083;&#1080;&#1085;&#1077;&#1081;&#1082;&#1072; 925 &mdash; &#1087;&#1086;&#1076;&#1076;&#1077;&#1088;&#1078;&#1082;&#1072; &#1089;&#1074;&#1086;&#1076;&#1072; &#1089;&#1090;&#1086;&#1087;&#1099;, &#1085;&#1072;&#1090;&#1091;&#1088;&#1072;&#1083;&#1100;&#1085;&#1099;&#1077; &#1084;&#1072;&#1090;&#1077;&#1088;&#1080;&#1072;&#1083;&#1099; &#1080; &#1089;&#1090;&#1080;&#1083;&#1100;.</p>
         <div class="hero-btns">
-          <a href="#catalog" class="btn-primary">&#1055;&#1086;&#1089;&#1084;&#1086;&#1090;&#1088;&#1077;&#1090;&#1100; &#1082;&#1072;&#1090;&#1072;&#1083;&#1086;&#1075;</a>
-          <a href="https://wa.me/77056100172?text=&#1047;&#1076;&#1088;&#1072;&#1074;&#1089;&#1090;&#1074;&#1091;&#1081;&#1090;&#1077;! &#1055;&#1086;&#1084;&#1086;&#1075;&#1080;&#1090;&#1077; &#1087;&#1086;&#1076;&#1086;&#1073;&#1088;&#1072;&#1090;&#1100; &#1088;&#1072;&#1079;&#1084;&#1077;&#1088;" class="btn-secondary">&#1055;&#1086;&#1076;&#1086;&#1073;&#1088;&#1072;&#1090;&#1100; &#1088;&#1072;&#1079;&#1084;&#1077;&#1088;</a>
+          <a href="#catalog" class="btn-primary">&#1055;&#1086;&#1089;&#1084;&#1086;&#1090;&#1088;&#1077;&#1090;&#1100; &#1082;&#1072;&#1090;&#1072;&#1083;&#1086;&#1075; &#8594;</a>
+          <a href="https://wa.me/77056100172?text=&#1047;&#1076;&#1088;&#1072;&#1074;&#1089;&#1090;&#1074;&#1091;&#1081;&#1090;&#1077;! &#1055;&#1086;&#1084;&#1086;&#1075;&#1080;&#1090;&#1077; &#1087;&#1086;&#1076;&#1086;&#1073;&#1088;&#1072;&#1090;&#1100; &#1088;&#1072;&#1079;&#1084;&#1077;&#1088;" class="btn-secondary">WhatsApp &#8594;</a>
         </div>
       </div>
       <div class="fu" style="transition-delay:.15s">
